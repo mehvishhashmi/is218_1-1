@@ -9,8 +9,9 @@
   $discount = $list_price * $discount_percent * .01;
   $discount_price = $list_price - $discount;
   
-  // apply currency formatting to the dollar amount
+  // apply currency formatting to the dollar and percent amounts
    $list_price_formatted = "$".number_format($list_price, 2);
+   $discount_percent_formatted = $discount_percent."%";
  
  
  
@@ -33,7 +34,7 @@
 	<span><?php echo $list_price_formatted; ?></span><br>
  
  	<label>Standard Discount:</label>
-	<span><?php echo $discount_percent; ?></span><br>
+	<span><?php echo $discount_percent_formatted; ?></span><br>
  </main>
 </body>
 
