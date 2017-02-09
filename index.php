@@ -12,7 +12,7 @@
   // apply currency formatting to the dollar and percent amounts
    $list_price_formatted = "$".number_format($list_price, 2);
    $discount_percent_formatted = $discount_percent."%";
- 
+   $discount_formatted = "$".number_format($discount, 2);
  
  
  // escape the unformatted input
@@ -35,6 +35,9 @@
  
  	<label>Standard Discount:</label>
 	<span><?php echo $discount_percent_formatted; ?></span><br>
+ 
+ 	<label>Discount Amount:</label>
+	<span><?php echo $discount_formatted; ?></span><br>
  </main>
 </body>
 
