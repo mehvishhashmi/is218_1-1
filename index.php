@@ -13,11 +13,12 @@
    $list_price_formatted = "$".number_format($list_price, 2);
    $discount_percent_formatted = $discount_percent."%";
    $discount_formatted = "$".number_format($discount, 2);
- 
+   $discount_price_formatted = "$".number_format($discount_price, 2);  
  
  // escape the unformatted input
    $product_description_escaped = htmlspecialchars($product_description);
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -38,7 +39,10 @@
  
  	<label>Discount Amount:</label>
 	<span><?php echo $discount_formatted; ?></span><br>
- </main>
+
+	<label>Discount Price:</label>
+	<span><?php echo $discount_price_formatted; ?></span><br>
+</main>
 </body>
 
 </html>
