@@ -4,8 +4,12 @@
   $product_description = $_POST['product_description'];
   $list_price = $_POST['list_price']; 
 
-
-  // escape the unformatted input
+  // apply currency formatting to the dollar amount
+   $list_price_formatted = "$".number_format($list_price, 2);
+ 
+ 
+ 
+ // escape the unformatted input
    $product_description_escaped = htmlspecialchars($product_description);
 ?>
 <!DOCTYPE html>
@@ -21,7 +25,7 @@
 	<span><?php echo $product_description_escaped; ?></span><br>
 
 	<label>List Price:</label>
-	<span><?php echo $list_price; ?></span><br>
+	<span><?php echo $list_price_formatted; ?></span><br>
  
  </main>
 </body>
