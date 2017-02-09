@@ -2,7 +2,7 @@
   
   // get the data from the form
   $product_description = $_POST['product_description'];
-  
+  $list_price = $_POST['list_price']; 
 
 
   // escape the unformatted input
@@ -20,8 +20,10 @@
 	<label> Product Description:</label>
 	<span><?php echo $product_description_escaped; ?></span><br>
 
-
-  </main>
+	<label>List Price:</label>
+	<span><?php echo $list_price; ?></span><br>
+ 
+ </main>
 </body>
 
 </html>
